@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+    <title>Title</title>
+
+    <script>
+        function start() {
+            var dir_img = document.getElementById("dir_img");
+            setInterval(function(){
+                dir_img.src = rand_pic();
+                setTimeout(function(){
+                    dir_img.style.visibility= 'visible';
+                }, 100);
+                setTimeout(function(){
+                    dir_img.style.visibility= 'hidden';
+                }, 1000);
+            }, 2000);
+        }
+        
+        function rand_pic() {
+            var random = Math.floor(Math.random() * 4);
+            switch (random){
+                case 0:
+                    return "directions_forward.jpg" ;
+                case 1:
+                    return "directions_backward.jpg" ;
+                case 2:
+                    return "directions_right.jpg" ;
+                case 3:
+                    return "directions_left.jpg" ;
+            }
+
+        }
+    </script>
+</head>
+
+<body style="background-color: black ; height: 100%" onload="start()">
+<div style="width: 100vm; height: 90vh; display: flex">
+    <img id="dir_img" src="directions_backward.jpg" style="margin: auto; height: 85vh">
+</div>
+
+</body>
+</html>

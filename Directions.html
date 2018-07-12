@@ -10,7 +10,7 @@
             var dir_img = document.getElementById("dir_img");
             setTimeout(function(){
                 document.getElementById("txt").style.visibility= 'hidden';
-            }, 4000);
+            }, 4500);
             setInterval(function(){
                 dir_img.src = rand_pic();
                 setTimeout(function(){
@@ -42,7 +42,11 @@
 <body style="background-color: black ; height: 100%" onload="start()">
 
 <div id="container" style="width: 100vm; height: 90vh; display: flex">
-    <h1 id="txt" style="color: aquamarine; z-index: -1; position: fixed; left: 33%; top: 33%;">Created By : Mohsen Seif</h1>
+    <div id="txt" style="font-family: 'Courier New'; z-index: -1; position: fixed; left: 20%; top: 33%;">
+        <h1 style="color: aquamarine;">Created By : Mohsen Seif</h1>
+        <h2 style="color: darkslategrey;">look at the directions that will be shown in a few seconds</h2>
+    </div>
+
     <img id="dir_img" src="directions_backward.jpg" style="margin: auto; height: 85vh; visibility: hidden">
 </div>
 
